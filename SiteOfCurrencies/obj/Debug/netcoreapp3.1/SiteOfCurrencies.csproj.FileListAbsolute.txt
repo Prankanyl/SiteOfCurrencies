@@ -33,3 +33,10 @@
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/SiteOfCurrencies.dll
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/SiteOfCurrencies.pdb
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/SiteOfCurrencies.csproj.CopyComplete
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.Mvc.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.Razor.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.Helpers.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.WebPages.Deployment.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.WebPages.Razor.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.WebPages.dll
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/Microsoft.Web.Infrastructure.dll
