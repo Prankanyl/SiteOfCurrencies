@@ -1,10 +1,32 @@
 ﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Калькулятор";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="container-fluid" style="background-color: #cccccc">
+        <h3 style="padding-top: 1%; text-align: center">Калькулятор валют</h3>      
+        <form>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option>Default select</option>
+                        </select>
+                        <br>
+                        <input type="text" class="form-control" id="firstVal">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option>Default select</option>
+                        </select>
+                        <br>
+                        <input type="text" class="form-control" id="secondVal">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Расчитать</button>
+            </div>
+        </form>
+    </div>
+
