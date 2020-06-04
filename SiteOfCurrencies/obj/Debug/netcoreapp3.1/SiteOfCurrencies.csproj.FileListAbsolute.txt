@@ -41,3 +41,6 @@
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/System.Web.WebPages.dll
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/bin/Debug/netcoreapp3.1/Microsoft.Web.Infrastructure.dll
 /Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/Razor/Pages/calculator.cshtml.g.cs
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/Razor/Pages/Dynamics.cshtml.g.cs
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/Razor/Pages/Information.cshtml.g.cs
+/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/Debug/netcoreapp3.1/Razor/Pages/ListCurrency.cshtml.g.cs

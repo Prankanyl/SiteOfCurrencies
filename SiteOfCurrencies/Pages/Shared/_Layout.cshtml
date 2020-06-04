@@ -6,12 +6,17 @@
     <title>Курс валют</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background-color: #e3f2fd;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-            <a class="navbar-brand">
-                <img src="~/img/dollar.jpeg" alt="loading">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="Index">
+                <img src="~/img/dollar.jpg1" alt="loading" style="height: 15; width: 15;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -20,24 +25,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="Dynamics"><b>Динамика</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Динамика</a>
+                        <a class="nav-link active" href="calculator"><b>Калькулятор</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Калькулятор</a>
+                        <a class="nav-link active" href="ListCurrency"><b>Список валют</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Список валют</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">О проекте</a>
+                        <a class="nav-link active" href="Information"><b>О проекте</b></a>
                     </li>
                 </ul>
-
-                <a class="nav-link" href="#">Регистрация</a>
-                <a class="nav-link" href="#">Вход</a>
             </div>
         </nav>
     </header>
@@ -46,12 +45,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - SiteOfCurrencies - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
