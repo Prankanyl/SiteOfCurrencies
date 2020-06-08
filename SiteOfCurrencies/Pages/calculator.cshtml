@@ -2,31 +2,42 @@
 @{
     ViewData["Title"] = "Калькулятор";
 }
+<style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        text-align: justify;
+        font-style: italic;
+        font-size: 14pt;
+    }
 
+</style>
     <div class="container-fluid" style="background-color: #cccccc">
         <h3 style="padding-top: 1%; text-align: center">Калькулятор валют</h3>      
-        <form>
+        <form oninput="result.value=(val.value/2.50).toFixed(2); result1.value=(val.value*2.50).toFixed(2)">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <select class="form-control">
-                            <option>Default select</option>
+                        <select class="form-control" id="select1">
+                            <option>BYN</option>
                         </select>
                         <br>
-                        <input type="text" class="form-control" id="firstVal">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
                         <select class="form-control">
-                            <option>Default select</option>
+                            <option>USD</option>
                         </select>
                         <br>
-                        <input type="text" class="form-control" id="secondVal">
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Расчитать</button>
+                <input type="number" class="form-control" name="val" placeholder="Введи число" autofocus>
+                
             </div>
+            <br>
+            <p><b>КУРС: </b>2.5</p>
+            <p><b>Из BYN в USD:</b> <output name="result">0</output></p>
+            <p><b>Из USD в BYN:</b> <output name="result1">0</output></p>
         </form>
     </div>
 

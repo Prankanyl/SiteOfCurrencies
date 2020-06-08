@@ -22,6 +22,7 @@ namespace SiteOfCurrencies
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             services.AddRazorPages();
             services.AddMvc();
         }

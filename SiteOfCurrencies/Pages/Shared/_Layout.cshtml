@@ -6,17 +6,25 @@
     <title>Курс валют</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" href="~/img/dollar.ico"/>
     <style>
-        body {
-            background-color: #e3f2fd;
-        }
+      body {
+      background-color: #e3f2fd;
+      }
+      .branch {
+      color: #ae0000;
+      font-style: italic;
+      font-size: 18pt;
+      text-shadow: 1px 1px 2px black;
+      }
     </style>
+  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <a class="navbar-brand" href="Index">
-                <img src="~/img/dollar.jpg1" alt="loading" style="height: 15; width: 15;">
+              <p class="branch"><b>SiteOfCurrencies</b></p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,9 +32,6 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="Dynamics"><b>Динамика</b></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="calculator"><b>Калькулятор</b></a>
                     </li>
