@@ -15,16 +15,16 @@
       color: #ae0000;
       font-style: italic;
       font-size: 18pt;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 1px 1px 2px white;
       }
     </style>
   <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #10177c">
             <a class="navbar-brand" href="Index">
-              <p class="branch"><b>SiteOfCurrencies</b></p>
+                <p class="branch"><b>SiteOfCurrencies</b></p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,12 +45,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
+    @RenderBody()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

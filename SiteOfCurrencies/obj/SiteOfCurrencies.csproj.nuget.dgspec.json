@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Паша\\Desktop\\SiteOfCurrencies\\SiteOfCurrencies\\SiteOfCurrencies.csproj": {}
+    "/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/SiteOfCurrencies.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Паша\\Desktop\\SiteOfCurrencies\\SiteOfCurrencies\\SiteOfCurrencies.csproj": {
+    "/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/SiteOfCurrencies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Паша\\Desktop\\SiteOfCurrencies\\SiteOfCurrencies\\SiteOfCurrencies.csproj",
+        "projectUniqueName": "/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/SiteOfCurrencies.csproj",
         "projectName": "SiteOfCurrencies",
-        "projectPath": "C:\\Users\\Паша\\Desktop\\SiteOfCurrencies\\SiteOfCurrencies\\SiteOfCurrencies.csproj",
-        "packagesPath": "C:\\Users\\Паша\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Паша\\Desktop\\SiteOfCurrencies\\SiteOfCurrencies\\obj\\",
+        "projectPath": "/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/SiteOfCurrencies.csproj",
+        "packagesPath": "/Users/Valera/.nuget/packages/",
+        "outputPath": "/Users/Valera/Projects/SiteOfCurrencies/SiteOfCurrencies/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Паша\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/Valera/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     }
