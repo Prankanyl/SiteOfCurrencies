@@ -44,7 +44,7 @@
             if (currency1.value === currency2.value) { 
                 result.innerText = 'Результат: ' + val.value;
             } else {
-                if (currency1.value != 'BYN') { 
+                if (currency1.value != 'BYN1') { 
                     z = val.value * c[currency1.value]; 
                     result.innerHTML = 'Результат: ' + Math.ceil((z / c[currency2.value]) * 100) / 100; 
                 } else { 
