@@ -66,7 +66,7 @@
             });
             $('#btn').click(function () {
                 $('#res').empty();
-                $('#btn').attr("disabled", "disabled");
+                //$('#btn').attr("disabled", "disabled");
                 switch ($('#mode').val()) {
                     case '0':
                         currencies();
@@ -144,7 +144,7 @@
                       $('<p>',{ text: 'Количество единиц иностранной валюты: ' + item.Cur_Scale  }).appendTo($('#res'));
                       $('<p>',{ text: 'Периодичность установления курса: ' + item.Cur_Periodicity  }).appendTo($('#res'));  
                       $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateStart }).appendTo($('#res'));
-                      $('<p>',{ text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateEnd  }).appendTo($('#res')); 
+                      $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + item.Cur_DateEnd  }).appendTo($('#res')); 
                       $('<hr>',{ text: ''}).appendTo($('#res')); 
                   });
                   $('#btn').removeAttr("disabled");
@@ -153,8 +153,30 @@
                   alert('ошибка');
             });
         };
-        
+        async function CheckElementExist() {
+            var Id = $('#iCur').val();
+            var Url = 'https://www.nbrb.by/API/ExRates/Currencies/';
+            Id = Id !== undefined ? Id : '';
+
+
+
+            await fetch(`${Url}/${Id}`)
+                .then((response) => {
+
+                    if (response.code == 404) {
+                        return new Error('No data in Request');
+                    }
+
+                })
+                .then((data) => {
+                    return (data)
+                    alert(data);
+                    console.log(data);
+                });
+
+        }
         function currency() {
+            
             $.getJSON(uri + 'ExRates/Currencies/' + $('#iCur').val())
                 .done(function (data) {
                     $('<p>', { text: 'Внутренний код: ' + data.Cur_ID }).appendTo($('#res'));
@@ -173,9 +195,8 @@
                     $('<p>', { text: 'Количество единиц иностранной валюты: ' + data.Cur_Scale }).appendTo($('#res'));
                     $('<p>', { text: 'Периодичность установления курса: ' + data.Cur_Periodicity }).appendTo($('#res'));
                     $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateStart }).appendTo($('#res'));
-                    $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
+                    $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
                     $('<hr>', { text: '' }).appendTo($('#res'));
-                    $('#btn').removeAttr("disabled");
                 }).error(function (err) {
                     $('#btn').removeAttr("disabled");
                     alert('ошибка');
@@ -216,7 +237,7 @@
                       $('<p>', { text: 'Количество единиц иностранной валюты: ' + item.Cur_Scale }).appendTo($('#res'));
                       $('<p>', { text: 'Периодичность установления курса: ' + item.Cur_Periodicity }).appendTo($('#res'));
                       $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateStart }).appendTo($('#res'));
-                      $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
+                      $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
                       $('<hr>', { text: '' }).appendTo($('#res')); 
                   });
                   $('#btn').removeAttr("disabled");
@@ -246,7 +267,7 @@
                       $('<p>', { text: 'Количество единиц иностранной валюты: ' + item.Cur_Scale }).appendTo($('#res'));
                       $('<p>', { text: 'Периодичность установления курса: ' + item.Cur_Periodicity }).appendTo($('#res'));
                       $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateStart }).appendTo($('#res'));
-                      $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
+                      $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
                       $('<hr>', { text: '' }).appendTo($('#res')); 
                   });
                   $('#btn').removeAttr("disabled");
@@ -274,7 +295,7 @@
                   $('<p>', { text: 'Количество единиц иностранной валюты: ' + data.Cur_Scale }).appendTo($('#res'));
                   $('<p>', { text: 'Периодичность установления курса: ' + data.Cur_Periodicity }).appendTo($('#res'));
                   $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateStart }).appendTo($('#res'));
-                  $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
+                  $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
                   $('<hr>', { text: '' }).appendTo($('#res')); 
                   $('#btn').removeAttr("disabled");
               }).error(function (err) {
@@ -302,7 +323,7 @@
                   $('<p>', { text: 'Количество единиц иностранной валюты: ' + data.Cur_Scale }).appendTo($('#res'));
                   $('<p>', { text: 'Периодичность установления курса: ' + data.Cur_Periodicity }).appendTo($('#res'));
                   $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateStart }).appendTo($('#res'));
-                  $('<p>', { text: 'Дата включения валюты в перечень валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
+                  $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + data.Cur_DateEnd }).appendTo($('#res'));
                   $('<hr>', { text: '' }).appendTo($('#res')); 
                   $('#btn').removeAttr("disabled");
               }).error(function (err) {
@@ -330,7 +351,7 @@
                       $('<p>', { text: 'Количество единиц иностранной валюты: ' + item.Cur_Scale }).appendTo($('#res'));
                       $('<p>', { text: 'Периодичность установления курса: ' + item.Cur_Periodicity }).appendTo($('#res'));
                       $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateStart }).appendTo($('#res'));
-                      $('<p>', { text: 'Дата включения валюты в перечень валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
+                      $('<p>', { text: 'Дата исключения валюты из перечня валют: ' + item.Cur_DateEnd }).appendTo($('#res'));
                       $('<hr>', { text: '' }).appendTo($('#res')); 
                   });
                   $('#btn').removeAttr("disabled");
@@ -340,31 +361,32 @@
               });
               }
     </script>
-<div class="container-fluid" style="background-color: #676dc5">
-    <h3 align="center" style="color: #ffffff">
-        <b>API Национального банка для получения официального курса белорусского рубля по отношению к иностранным валютам.</b>
-    </h3>
-    <select id="mode" style="text-align: center">
-        <option value="0">справочник валют</option>
-        <option value="1">описание валюты</option>
-        <option value="2">курс валюты на дату</option>
-        <option value="10">курс валюты на дату по цифровому коду валюты (ИСО 4217)</option>
-        <option value="11">курс валюты на дату по буквенному коду валюты (ИСО 4217)</option>
-        <option value="6">курс валюты на сегодня</option>
-        <option value="8">курс валюты на сегодня по цифровому коду валюты (ИСО 4217)</option>
-        <option value="9">курс валюты на сегодня по буквенному коду валюты (ИСО 4217)</option>
-        <option value="3">курс валюты за период</option>
-        <option value="4">все курсы, устанавливаемые ежедневно на дату</option>
-        <option value="7">все курсы, устанавливаемые ежедневно на сегодня</option>
-        <option value="5">все курсы, устанавливаемые ежемесячно</option>
-        <option value="12">справочник валют(ответ в json)</option>
-    </select>
-    <span id="onDate" style="display: none">На дату:<input type="text" id="iDate" placeholder="Например: 1991-01-01T00:00:00"/></span> 
-    <span id="Cur" style="display: none">Идентификационный номер валюты: <input type="text" id="iCur" placeholder="Например: 1"/></span> 
-    <span id="period" style="display: none">с: <input type="text" id="ifrom" placeholder="Например: 1991-01-01T00:00:00"/> по: <input type="text" id="ito" placeholder="Например: 2007-11-30T00:00:00"/></span>
-    <input type="button" id="btn" value="получить" style="text-align: center"/>
-    <br />
-</div>
+    <div class="container-fluid" style="background-color: #676dc5;">
+        <h3 align="center" style="color: #ffffff">
+            <b>API Национального банка для получения официального курса белорусского рубля по отношению к иностранным валютам.</b>
+        </h3>
+        <select id="mode" style="text-align: center; ">
+            <option value="0">справочник валют</option>
+            <option value="1">описание валюты</option>
+            <option value="2">курс валюты на дату</option>
+            <option value="10">курс валюты на дату по цифровому коду валюты (ИСО 4217)</option>
+            <option value="11">курс валюты на дату по буквенному коду валюты (ИСО 4217)</option>
+            <option value="6">курс валюты на сегодня</option>
+            <option value="8">курс валюты на сегодня по цифровому коду валюты (ИСО 4217)</option>
+            <option value="9">курс валюты на сегодня по буквенному коду валюты (ИСО 4217)</option>
+            <option value="3">курс валюты за период</option>
+            <option value="4">все курсы, устанавливаемые ежедневно на дату</option>
+            <option value="7">все курсы, устанавливаемые ежедневно на сегодня</option>
+            <option value="5">все курсы, устанавливаемые ежемесячно</option>
+            <option value="12">справочник валют(ответ в json)</option>
+        </select>
+        <span id="onDate" style="display: none">На дату:<input type="text" id="iDate" placeholder="Например: 1991-01-01T00:00:00" /></span>
+        <span id="Cur" style="display: none">Идентификационный номер валюты: <input type="text" id="iCur" placeholder="Например: 1" /></span>
+        <span id="period" style="display: none">с: <input type="text" id="ifrom" placeholder="Например: 1991-01-01T00:00:00" /> по: <input type="text" id="ito" placeholder="Например: 2007-11-30T00:00:00" /></span>
+        <input class="btn btn-info" type="button" id="btn" value="получить" style="text-align: center" />
+        <br />
+        <br />
+    </div>
 <div class="container-fluid">
     <div id="res">
 

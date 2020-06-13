@@ -11,7 +11,7 @@
         font-size: 14pt;
     }
     .blockcenter {
-        background-color: #bd1313;
+        background-color: #191970;
         position: absolute;
         top: 30%;
         left: 35%;
@@ -44,7 +44,7 @@
             if (currency1.value === currency2.value) { 
                 result.innerText = 'Результат: ' + val.value;
             } else {
-                if (currency1.value != 'BYN1') { 
+                if (currency1.value != 'PRANKANYL') { 
                     z = val.value * c[currency1.value]; 
                     result.innerHTML = 'Результат: ' + Math.ceil((z / c[currency2.value]) * 100) / 100; 
                 } else { 
