@@ -2,19 +2,22 @@
 @{
     ViewData["Title"] = "Список валют";
 }
-<style>
-    p {
-        font-family: 'Times New Roman', Times, serif;
-        text-align: justify;
-        font-style: italic;
-        font-size: 14pt;
-    }
-    span {
-        color: #ffffff;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 14pt;
-    }
-</style>
+    <style>
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+            font-style: italic;
+            font-size: 14pt;
+        }
+        span {
+            color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14pt;
+        }
+         body {
+         background-color: #e3f2fd;
+         }
+    </style>
 <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script type="text/javascript">
         var uri = 'https://www.nbrb.by/API/';
@@ -153,28 +156,6 @@
                   alert('ошибка');
             });
         };
-        async function CheckElementExist() {
-            var Id = $('#iCur').val();
-            var Url = 'https://www.nbrb.by/API/ExRates/Currencies/';
-            Id = Id !== undefined ? Id : '';
-
-
-
-            await fetch(`${Url}/${Id}`)
-                .then((response) => {
-
-                    if (response.code == 404) {
-                        return new Error('No data in Request');
-                    }
-
-                })
-                .then((data) => {
-                    return (data)
-                    alert(data);
-                    console.log(data);
-                });
-
-        }
         function currency() {
             
             $.getJSON(uri + 'ExRates/Currencies/' + $('#iCur').val())
@@ -392,5 +373,3 @@
 
     </div>
 </div>
-
-
